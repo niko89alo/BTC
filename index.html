@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bitcoin Tracker</title>
+    <style>
+        body { font-family: sans-serif; background: #1e1e2f; color: white; padding: 20px; }
+        input { margin: 5px 0; padding: 5px; width: 300px; }
+        button { padding: 8px 16px; background: green; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Bitcoin Price Tracker</h1>
+    <p>Текущая цена BTC: <strong>{{ price }} €</strong></p>
+    <p style="color:lightgreen;">{{ message }}</p>
+    <form method="POST">
+        <label>Целевая цена (EUR):</label><br>
+        <input type="text" name="target_price" value="{{ target }}"><br>
+        <label>Telegram Bot Token:</label><br>
+        <input type="text" name="telegram_token"><br>
+        <label>Telegram User ID:</label><br>
+        <input type="text" name="telegram_user_id"><br>
+        <button type="submit">Сохранить настройки</button>
+    </form>
+</body>
+</html>
